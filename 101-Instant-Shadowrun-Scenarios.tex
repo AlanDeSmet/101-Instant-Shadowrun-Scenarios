@@ -3,9 +3,10 @@
 \usepackage{titlesec} % titleformat
 \usepackage{enumitem} % adjust list spacing
 \usepackage[top=0.6in, bottom=0.9in, left=0.7in, right=0.7in,xetex]{geometry}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{xstring}
+\usepackage{graphicx} % include pngs
+\usepackage{multicol} % multicols
+\usepackage{xstring}  % StrLeft
+\usepackage{tocloft}  % cftbeforesecskip
 
 \renewcommand{\textsc}[1]{{\fontspec{Friz Quadrata SC TT}\selectfont #1}}
 
@@ -21,14 +22,22 @@
 		\def\TMPSCENARIO{{\small\textit{©\getyear{#5}{} #4}}}
 	}
 	{\TMPSCENARIO}
-\newcommand{\johnson}[2]{\textbf{Johnson: #1 (#2):}}
-\newcommand{\synopsis}{\textbf{Synopsis: }}
-\newcommand{\notes}{\textbf{Notes: }}
-\newcommand{\twist}{\textbf{The Twist: }}
+\newcommand{\sectionlabel}[1]{\textbf{#1: }}
+\newcommand{\johnson}[2]{\sectionlabel{Johnson: #1 (#2)}}
+\newcommand{\synopsis}{\sectionlabel{Synopsis}}
+\newcommand{\notes}{\sectionlabel{Notes}}
+\newcommand{\twist}{\sectionlabel{The Twist}}
 
 \newcommand{\fmttitle}[1]{\textit{#1}}
 
+% Only show sections in table of contents
 \setcounter{tocdepth}{1}
+
+% Spacing between table of contents section entries
+\setlength{\cftbeforesecskip}{0em}
+
+% Suppress label for table of contents
+\renewcommand{\contentsname}{}
 
 
 
@@ -39,16 +48,16 @@
 \begin{document}
 
 
-\titlespacing{\section}{0em}{3em}{0em}
+\titlespacing{\section}{0em}{2em}{0em}
 \titleformat{\section}
-  {\filright\normalfont\fontsize{18}{18}\selectfont}
+  {\filright\normalfont\fontsize{20}{20}\selectfont}
   {\thesection}
   {1em}
   {}
 
 
 \begin{center}
-{\normalfont\fontsize{30}{30}\selectfont 46 Instant Shadowrun Scenarios}
+{\normalfont\fontsize{30}{30}\selectfont \textbf{46 Instant Shadowrun Scenarios}}
 \end{center}
 
 \begin{multicols}{2}
@@ -1312,7 +1321,7 @@ Most problems in the sixth world have a very specific solution, throw money at i
 
 So it should be understandable that people with a great deal of money are finding themselves targeted. Someone out there has the balls to steal from the rich, and the rich are ``fighting back'' so to say. The Johnson wants you to find the thief, or thieves, and get back what was stolen. Then he wants you to put an end to the problem, permanently. If you can do it, the rewards will be outrageous.
 
-\textbf{The Setup:} Money solves a lot of problems, yeah, but sometimes there's no replacing skill. A team of Shadowrunners has gotten it into their heads to buck the system and go independent. They're turning on the Johnsons, the Corps, the Politicians and the Stars and taking what they want instead of letting it come to them.
+\sectionlabel{The Setup} Money solves a lot of problems, yeah, but sometimes there's no replacing skill. A team of Shadowrunners has gotten it into their heads to buck the system and go independent. They're turning on the Johnsons, the Corps, the Politicians and the Stars and taking what they want instead of letting it come to them.
 
 Normally, this sort of problem would sort itself out. The Runners are pissing off a lot of very important people and they still have a lot of money at their disposal. The problem is that they're good, very good. No records, no suspicious activity, no pictures, no leads, nothing. Whoever these guys are, they're making the best CorpSec has to offer look like a bunch of chumps and they're getting away with it.
 
@@ -1605,7 +1614,7 @@ Devil Rats can be found on p299 of the Core Book (Anniversary edition). Toxic Sp
 
 
 
-\section{Credits}
+\section*{Credits}
 
 Original idea by Save-vs-DM.
 
