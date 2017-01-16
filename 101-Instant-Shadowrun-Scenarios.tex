@@ -7,6 +7,7 @@
 \usepackage{multicol} % multicols
 \usepackage{xstring}  % StrLeft
 \usepackage{tocloft}  % cftbeforesecskip
+\usepackage{hyperref} % links
 
 \renewcommand{\textsc}[1]{{\fontspec{Friz Quadrata SC TT}\selectfont #1}}
 
@@ -19,9 +20,10 @@
 		\noindent{\textsc{#2}}\nopagebreak
 
 		\noindent\textit{#3}\nopagebreak
-		\def\TMPSCENARIO{{\small\textit{©\getyear{#5}{} #4}}}
+		\def\TMPSCENARIO{{\small\href{#6}{\textit{©\getyear{#5}{} #4}}}}
 	}
 	{\TMPSCENARIO}
+
 \newcommand{\sectionlabel}[1]{\textbf{#1: }}
 \newcommand{\johnson}[2]{\sectionlabel{Johnson: #1 (#2)}}
 \newcommand{\synopsis}{\sectionlabel{Synopsis}}
