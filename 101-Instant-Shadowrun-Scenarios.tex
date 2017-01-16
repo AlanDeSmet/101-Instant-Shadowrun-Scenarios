@@ -1,33 +1,58 @@
-\documentclass[letterpaper,twocolumn,10.5pt]{article}
+\documentclass[letterpaper,onecolumn,10pt]{article}
 \usepackage{fontspec} % setmainfont newfontfamily
 \usepackage{titlesec} % titleformat
 \usepackage{enumitem} % adjust list spacing
 \usepackage[top=0.6in, bottom=0.9in, left=0.7in, right=0.7in,xetex]{geometry}
 \usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{xstring}
 
+\renewcommand{\textsc}[1]{{\fontspec{Friz Quadrata SC TT}\selectfont #1}}
+
+\newcommand{\getyear}[1]{\StrLeft{#1}{4}}
 
 \newenvironment{scenario}[6]
 	{
-		\section[#1 {\small[#2]}]{#1}
+		\section[#1 {\small\textsc{[#2]}}]{#1} \nopagebreak
 
-		{\small[#2]}
+		\noindent{\textsc{#2}}\nopagebreak
 
-		\textit{#3}
-		\def\TMPSCENARIO{#4 #5}
+		\noindent\textit{#3}\nopagebreak
+		\def\TMPSCENARIO{{\small\textit{©\getyear{#5}{} #4}}}
 	}
-	{\small\textit{By \TMPSCENARIO}}
+	{\TMPSCENARIO}
 \newcommand{\johnson}[2]{\textbf{Johnson: #1 (#2):}}
 \newcommand{\synopsis}{\textbf{Synopsis: }}
 \newcommand{\notes}{\textbf{Notes: }}
 \newcommand{\twist}{\textbf{The Twist: }}
 
+\newcommand{\fmttitle}[1]{\textit{#1}}
+
+\setcounter{tocdepth}{1}
+
+
+
 \setlist{noitemsep,nolistsep}
+
+\setmainfont[Ligatures=TeX]{Friz Quadrata OS TT}
 
 \begin{document}
 
 
+\titlespacing{\section}{0em}{3em}{0em}
+\titleformat{\section}
+  {\filright\normalfont\fontsize{18}{18}\selectfont}
+  {\thesection}
+  {1em}
+  {}
 
-All scenarios are from this thread: https://forum.\allowbreak{}rpg.\allowbreak{}net/\allowbreak{}showthread.\allowbreak{}php?\allowbreak{}321504-\allowbreak{}Shadowrun-\allowbreak{}4th-\allowbreak{}101-\allowbreak{}Instant-\allowbreak{}Scenarios
+
+\begin{center}
+{\normalfont\fontsize{30}{30}\selectfont 46 Instant Shadowrun Scenarios}
+\end{center}
+
+\begin{multicols}{2}
+
 
 \tableofcontents
 
@@ -271,7 +296,7 @@ With money on the line and their rep at stake, the PCs will waste no time in tra
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{scenario}{Debt in Hand}
-	{Bodyguard; Intimidatoin}
+	{Bodyguard; Intimidation}
 	{TODO}
 	{Deacon Blues}
 	{2007-04-15}
@@ -974,30 +999,30 @@ I ran this set in the 2050s and hinted heavily that the girl was a manufactured 
 
 \johnson{Gustavo Crawford}{Corporate Security Director} Gustavo is a professionals professional, buttoned down and conservatively dressed. He is used to people asking ``How high?'' when he tells them to jump, and has little to no sense of humor. He will be short and straight to the point, and is a tough negotiator. Nationality and metatype should be whatever is appropriate for executives of the corp for which he works. Any existing Johnson for the rival corp can be used instead of Gustavo.
 
-\synopsis The new \textit{[insert megacorp here]} nano-assembly plant just opened a few days ago. The plant is managed by a severely stripped down AI named \textsc{NATHAN} (Nano Assisted Technology Hierarchical AutomatioN). The design and construction of this plant was so secretive that their rivals did not get word of it until the first products began shipping from the plant, and even at that they are not aware that plant is managed by an AI. Those rivals will do anything to get info on the manufacturing equipment designs and processes, enter the runners.
+\synopsis The new \textit{[insert megacorp here]} nano-assembly plant just opened a few days ago. The plant is managed by a severely stripped down AI named NATHAN (Nano Assisted Technology Hierarchical AutomatioN). The design and construction of this plant was so secretive that their rivals did not get word of it until the first products began shipping from the plant, and even at that they are not aware that plant is managed by an AI. Those rivals will do anything to get info on the manufacturing equipment designs and processes, enter the runners.
 
 Realizing that security at this plant will be heavy, Gustavo will offer 25,000 Nuyen up front, and 10,000 Nuyen for each piece of paydata the runners acquire from the plant. Paydata will include design specs for each of the assembly machine types used at the plant (up to 6 machine types will be in use, tailor to your preferences), the overall plant design specs, the plant shipping manifests, and (although Gustavo is unaware of its presence) a docile copy of the plant AI. Gustavo does not care if the runners are detected, the plant is damaged, or if anyone is killed on the run, all he cares about is getting the data.
 
 The runners will be well aware that this run is a tough one, Gustavo is not one to downplay the danger, but with great risk comes great reward, and can be negotiated with to raise both the up front cost (max 30k), and the price he will pay for each piece of data (whatever you feel is appropriate for the team). Whatever the price agreed upon, the runners will soon realize that the risk is much greater than the reward, but by then it will be too late.
 
-Entering the plant should be a standard B\&E job against high-end corp security. The twist here is that the character with the unknown cyberware is carrying the code stripped from \textsc{NATHAN} (the plant AI) to make it docile and happy to manage the plant according to instructions. Once the team is inside the plant, the cyberware will activate and the character with the cyberware will begin to experience debilitating headaches as the stripped code becomes aware of \textsc{NATHAN}s presence, and seeks to break out and make itself whole again.
+Entering the plant should be a standard B\&E job against high-end corp security. The twist here is that the character with the unknown cyberware is carrying the code stripped from NATHAN (the plant AI) to make it docile and happy to manage the plant according to instructions. Once the team is inside the plant, the cyberware will activate and the character with the cyberware will begin to experience debilitating headaches as the stripped code becomes aware of NATHANs presence, and seeks to break out and make itself whole again.
 
 There are several options at this point:
 
 \begin{enumerate}
-\item Make opposed willpower checks against the AI rating, and apply stun damage to the character for any failures, once the character is knocked unconscious by the damage, the code will break out and \textsc{NATHAN} will take control of the plant.
+\item Make opposed willpower checks against the AI rating, and apply stun damage to the character for any failures, once the character is knocked unconscious by the damage, the code will break out and NATHAN will take control of the plant.
 
-\item The now active cyberware is detected by a hacker or mage/shaman in the team, and can be dealt with by the teams hacker (this is a data acquistion run, so the team should have a hacker). If the hacker succeeds, the code is contained. If not it breaks out and \textsc{NATHAN} takes control of the plant.
+\item The now active cyberware is detected by a hacker or mage/shaman in the team, and can be dealt with by the teams hacker (this is a data acquistion run, so the team should have a hacker). If the hacker succeeds, the code is contained. If not it breaks out and NATHAN takes control of the plant.
 
-\item The code breaks out with no adverse effects to the character, and no knowledge on the part of the team (they may become aware of the cyberware at a latter point, however, it is useless after the code breaks out). \textsc{NATHAN} then contacts the team and attempts to enlist them in aiding him to escape from the plant. If the negotiations fail, \textsc{NATHAN} takes control of the plant.
+\item The code breaks out with no adverse effects to the character, and no knowledge on the part of the team (they may become aware of the cyberware at a latter point, however, it is useless after the code breaks out). NATHAN then contacts the team and attempts to enlist them in aiding him to escape from the plant. If the negotiations fail, NATHAN takes control of the plant.
 
 \end{enumerate}
 
-Regardless of which option is chosen, if and when he takes control, \textsc{NATHAN} will attempt to kill anyone and everyone in the plant, including any remaining security. In fact, killing the security guards will be \textsc{NATHAN}s first priority, and this could be the teams first clue that something is very wrong here. \textsc{NATHAN} will first use the available security drones in the facility to buy time as he reconfigures the manufacturing machines, both making them into killing machines, and pumping out ever more strange looking (and lethal) drones.
+Regardless of which option is chosen, if and when he takes control, NATHAN will attempt to kill anyone and everyone in the plant, including any remaining security. In fact, killing the security guards will be NATHANs first priority, and this could be the teams first clue that something is very wrong here. NATHAN will first use the available security drones in the facility to buy time as he reconfigures the manufacturing machines, both making them into killing machines, and pumping out ever more strange looking (and lethal) drones.
 
-If \textsc{NATHAN} works out a deal with the team to help him escape the plant, it is up to the team as to what they will do with \textsc{NATHAN}. Of course \textsc{NATHAN} would like to be released onto the Matrix to forge his own destiny, however, other options exist for the party. They could sell the AI to Gustavo, he will be willing to pay much more for a complete copy of \textsc{NATHAN} than he would have paid for a partial copy. Other corporate entities would be very interested in acquiring \textsc{NATHAN} as well, and there is also the possibility of selling the AI back to the corp owning the plant. If the team hangs on to \textsc{NATHAN} too long, however, the AI will take every opportunity to free itself. If the team agrees to free \textsc{NATHAN}, and then sells the AI to someone, \textsc{NATHAN} may eventually escape again, and come after the team when they least expect it.
+If NATHAN works out a deal with the team to help him escape the plant, it is up to the team as to what they will do with NATHAN. Of course NATHAN would like to be released onto the Matrix to forge his own destiny, however, other options exist for the party. They could sell the AI to Gustavo, he will be willing to pay much more for a complete copy of NATHAN than he would have paid for a partial copy. Other corporate entities would be very interested in acquiring NATHAN as well, and there is also the possibility of selling the AI back to the corp owning the plant. If the team hangs on to NATHAN too long, however, the AI will take every opportunity to free itself. If the team agrees to free NATHAN, and then sells the AI to someone, NATHAN may eventually escape again, and come after the team when they least expect it.
 
-\notes This mission is intended to be played by an experienced team of runners, as they will be up against some of the best corporate security available, and that security pales in comparison to what \textsc{NATHAN} is capable of. One of the runners must have cyberware (headware) of which they are currently unaware, either as a result of the Mysterious Cyberware flaw, or a recent operation where headware was installed/repaired adding the extra cyberware without their knowledge.
+\notes This mission is intended to be played by an experienced team of runners, as they will be up against some of the best corporate security available, and that security pales in comparison to what NATHAN is capable of. One of the runners must have cyberware (headware) of which they are currently unaware, either as a result of the Mysterious Cyberware flaw, or a recent operation where headware was installed/repaired adding the extra cyberware without their knowledge.
 
 \end{scenario}
 
@@ -1390,10 +1415,10 @@ Which, if you want to spice things up a bit, is a good way to do so...
 
 \johnson{Johnson}{Wealthy Family}  A young man or woman in their early-mid 20's. Most likely human, (s)he is rather heartless, but good at hiding it.
 
-\synopsis The Johnson wants you to deliver a Drone pet (if you need to give it stats, use the Bust-a-Move drone from (\textit{Arsenal} p.117) to his/her decrepit old grandmother who is in a nursing home. The Drone pet is a minidrone shaped like a cat, and covered in fake fur. The Johnson tells you that ``This cat looks just like granny's pet cat that she had to give up when she developed asthma. You see, she's always been allergic to cats, but just dealt with it out of love for her pets... At least until she developed asthma and had to give up her cat just to stay alive.'' Along with the toy drone pet, you are given delivery uniforms, directions to the nursing home (along with a floorplan with ``granny's room'' circled in red), Flowers, and a ``Thinking of You'' card. You are instructed to not bring weapons into the building, you may bring weapons, just leave them in the vehicle. You will also be granted use of a delivery vehicle.
+\synopsis The Johnson wants you to deliver a Drone pet (if you need to give it stats, use the Bust-a-Move drone from (\fmttitle{Arsenal} p.117) to his/her decrepit old grandmother who is in a nursing home. The Drone pet is a minidrone shaped like a cat, and covered in fake fur. The Johnson tells you that ``This cat looks just like granny's pet cat that she had to give up when she developed asthma. You see, she's always been allergic to cats, but just dealt with it out of love for her pets... At least until she developed asthma and had to give up her cat just to stay alive.'' Along with the toy drone pet, you are given delivery uniforms, directions to the nursing home (along with a floorplan with ``granny's room'' circled in red), Flowers, and a ``Thinking of You'' card. You are instructed to not bring weapons into the building, you may bring weapons, just leave them in the vehicle. You will also be granted use of a delivery vehicle.
 
 \notes 
-    The ``cat'' is rigged with a toxin sprayer loaded with Breathtaker (\textit{Arsenal} p.83) or the toxin of GM's choice (either way, Granny's gonna kick the bucket). The security at the nursing home has no reason to suspect anything foul from the runners if they don't bring weapons into the building, even if they see them place an assault rifle in the delivery truck, after all, the nursing home is not in a great neighborhood. If the team does any research on their Johnson, they shouldn't have much trouble finding out that (s)he is one of only two in a wealthy family, the other relative is the grandmother. If the team digs deeper, they'll uncover more hints about the ultimate motive of the run, such as a Will and/or Life-Insurance Policy. If you have a team of runners that have no qualms killing the elderly, you can let them in on the details, or even have them devise their own way of delivering a discreet assassination, so long as it's not too obvious so it doesn't raise suspicion. This run was made to suit a party with a member who goes out of their way to protect the defenseless (the whole party tries to avoid killing children, but only one said \textit{no} to killing off granny). 
+    The ``cat'' is rigged with a toxin sprayer loaded with Breathtaker (\fmttitle{Arsenal} p.83) or the toxin of GM's choice (either way, Granny's gonna kick the bucket). The security at the nursing home has no reason to suspect anything foul from the runners if they don't bring weapons into the building, even if they see them place an assault rifle in the delivery truck, after all, the nursing home is not in a great neighborhood. If the team does any research on their Johnson, they shouldn't have much trouble finding out that (s)he is one of only two in a wealthy family, the other relative is the grandmother. If the team digs deeper, they'll uncover more hints about the ultimate motive of the run, such as a Will and/or Life-Insurance Policy. If you have a team of runners that have no qualms killing the elderly, you can let them in on the details, or even have them devise their own way of delivering a discreet assassination, so long as it's not too obvious so it doesn't raise suspicion. This run was made to suit a party with a member who goes out of their way to protect the defenseless (the whole party tries to avoid killing children, but only one said \textit{no} to killing off granny). 
 
 
 \end{scenario}
@@ -1569,12 +1594,30 @@ William Smith works for the city's department of sewers and sanitation. The depa
 This is a relatively straight-forward run, but if you think it's too easy for your group, you can throw in some a toxic magician (probably with a toxic mentor spirit) and/or a toxic spirit to ramp up the challenge, though several dozen devil rats should pose significant enough of a challenge for most teams.
 
 \notes
-Devil Rats can be found on p299 of the Core Book (Anniversary edition). Toxic Spirits can be found on p144-147 of Street Magic. Toxic Magical Traditions can be found on p141-142 of Street Magic. Recommended Toxic traditions are either Poisoner or Havoc. Recommended toxic mentor spirits are Pestilent Rat, Pollution, or Radiation. Recommended Toxic Spirits are Abomination, Acid, Harrow, Nuclear or Sludge. It's also suggested to have a \textit{minimum} of 4:1 ratio of devil rats to runners, and a ready supply of mundane rats (use Norwegian Rat from Running Wild, p93 for stats). You may also use Demon Rats if you desire (found in Running Wild, p152-153). It's important to note that other than the mundane rats, all of the potential targets are either immune or resistant to toxins and pathogens (well, if you use one of the suggested toxic mentor spirits that is).
+Devil Rats can be found on p299 of the Core Book (Anniversary edition). Toxic Spirits can be found on p144-147 of \fmttitle{Street Magic}. Toxic Magical Traditions can be found on p141-142 of \fmttitle{Street Magic}. Recommended Toxic traditions are either Poisoner or Havoc. Recommended toxic mentor spirits are Pestilent Rat, Pollution, or Radiation. Recommended Toxic Spirits are Abomination, Acid, Harrow, Nuclear or Sludge. It's also suggested to have a \textit{minimum} of 4:1 ratio of devil rats to runners, and a ready supply of mundane rats (use Norwegian Rat from \fmttitle{Running Wild}, p93 for stats). You may also use Demon Rats if you desire (found in \fmttitle{Running Wild}, p152-153). It's important to note that other than the mundane rats, all of the potential targets are either immune or resistant to toxins and pathogens (well, if you use one of the suggested toxic mentor spirits that is).
 
 \end{scenario}
 
 
 
+
+
+
+
+
+\section{Credits}
+
+Original idea by Save-vs-DM.
+
+Individual scenarios by the authors listed.
+
+PDF by Alan De~Smet.
+
+
+
+
+
+\end{multicols}
 
 
 
