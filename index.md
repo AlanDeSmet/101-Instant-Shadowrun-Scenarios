@@ -39,11 +39,17 @@ If you're a suitably nerdy person, feel free to fork the repository, add your sc
 If that made no sense whatsoever, you can [send me an email](http://www.highprogrammer.com/alan/email.html).  Put "Shadowrun Scenario" in the subject, perhaps with the scenario's title.  Please format your scenario like so, based on Save vs DM's original post:
 
 > **Scenario Name** [Scenario Type]
+>
 > _A one line hook or capsules summary of the scenario._
-> **Jognson: NAME (AFFILIATION):** A description of the Johnson, as detailed as you feel suitable, along with any possible affiliations and motives. Aim for three to six sentences and try to be brief but descriptive.
+>
+> **Johnson: NAME (AFFILIATION):** A description of the Johnson, as detailed as you feel suitable, along with any possible affiliations and motives. Aim for three to six sentences and try to be brief but descriptive.
+>
 > **Synopsis:** A synopsis of the scenario, complete with the job, suitable opposition, and anything else you’ll need to work on the fly. You don’t have to lay everything out, but please give enough information to provide the basic ideas for a single session. Aim for five to ten sentences if possible.
+>
 > **Notes:** Any notes that are particularly important to the scenario but don’t fit into the above categories. This can be anything from a suggested reward, to where you might find stats for the enemies, to suggestions of how to continue the adventure. This section is optional.
+>
 > **Copyright YEAR by YOURNAME**
+>
 > **Licensing:** Details on licensing.
 
 For licensing, please [select a Creative Commons license](https://creativecommons.org/share-your-work/).  You must allow adaptations of your work, either without restriction or under the ShareAlike restriction.   You should end up with something like "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."  That's what I'll need. I'll consider other licenses, but it's far easier for everyone involved if you pick one of these standard licenses.
