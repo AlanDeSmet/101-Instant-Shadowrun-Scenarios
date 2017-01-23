@@ -8,6 +8,7 @@
 \usepackage{xstring}  % StrLeft
 \usepackage{tocloft}  % cftbeforesecskip
 \usepackage{hyperref} % links
+\usepackage{totcount} % Counter number of scenarios
 
 \renewcommand{\textsc}[1]{{\fontspec{Friz Quadrata SC TT}\selectfont #1}}
 
@@ -47,6 +48,8 @@
 
 \setmainfont[Ligatures=TeX]{Friz Quadrata OS TT}
 
+\regtotcounter{section}
+
 \begin{document}
 
 
@@ -66,7 +69,7 @@
 
 
 \begin{center}
-{\normalfont\fontsize{30}{30}\selectfont \textbf{47 Instant Shadowrun Scenarios}}
+{\normalfont\fontsize{30}{30}\selectfont \textbf{\total{section} Instant Shadowrun Scenarios}}
 \end{center}
 
 \begin{multicols}{2}
