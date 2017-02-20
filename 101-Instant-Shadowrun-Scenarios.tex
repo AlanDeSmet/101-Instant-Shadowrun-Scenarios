@@ -14,14 +14,14 @@
 
 \newcommand{\getyear}[1]{\StrLeft{#1}{4}}
 
-\newenvironment{scenario}[6]
+\newenvironment{scenario}[7][]
 	{
-		\section[#1 {\small\textsc{[#2]}}]{#1} \nopagebreak
+		\section[#2 {\small\textsc{[#3]}}]{#2} \nopagebreak
 
-		\noindent{\textsc{#2}}\nopagebreak
+		\noindent{\textsc{#3}}\nopagebreak
 
-		\noindent\emph{#3}\nopagebreak
-		\def\TMPSCENARIO{{\small\href{#6}{\textit{©\getyear{#5}{} #4}}}}
+		\noindent\emph{#4}\nopagebreak
+		\def\TMPSCENARIO{{\small\href{#7}{\textit{©\getyear{#6}{} #5} \textit{#1}}}}
 	}
 	{\TMPSCENARIO}
 
@@ -139,6 +139,12 @@ Individual scenarios by the authors listed.
 PDF by Alan De~Smet.
 
 You can download the latest version, learn about the project, contribute, or download the source files from \url{https://alandesmet.github.io/101-Instant-Shadowrun-Scenarios/} .
+
+Licensing on individual scenarios:
+
+\begin{itemize}
+\item \textbf{CC-BY-SA-4.0.} This work is licensed under a \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-ShareAlike 4.0 International License.}
+\end{itemize}
 
 
 
