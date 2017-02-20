@@ -16,7 +16,7 @@ Save vs DM on RPG.net started a [collection of Shadowrun scenarios](https://foru
 
 Save vs DM's original PDFs are still available: [printer friendly (white background)](http://www.savevsdm.com/pdf/SR4-101Scenarios-PF.pdf) or [with background](http://www.savevsdm.com/pdf/SR4-101Scenarios.pdf).
 
-I've made a new PDF incorporating the more recent scenarios and hopefully some new ones.  To ensure that other people can maintain this document if I stop doing so, it's on GitHub at https://github.com/AlanDeSmet/101-Instant-Shadowrun-Scenarios .
+I've made a new PDF incorporating the more recent scenarios and hopefully some new ones.  To ensure that other people can maintain this document if I stop doing so, it's on GitHub at [https://github.com/AlanDeSmet/101-Instant-Shadowrun-Scenarios](https://github.com/AlanDeSmet/101-Instant-Shadowrun-Scenarios).
 
 The copyright status is unclear. The original authors seem to have implicitly granted Save vs DM permission to collect them in a PDF; I'm hoping they won't mind if I continue what he did.
 
